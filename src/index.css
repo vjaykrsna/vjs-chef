@@ -6,7 +6,7 @@
 body {
     background-color: #fefdec;
     min-width: 350px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -63,9 +63,16 @@ main {
     padding: 0 10px;
 }
 
+.add-ingred-error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+}
+
 #ingred-list-container {
     padding-left: 80px;
-    /* margin: 0 auto; */
 }
 
 #ingred-list-heading {
@@ -92,7 +99,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: #0000001F;
+    background-color: #0000001f;
     border-radius: 20px;
 }
 
@@ -113,15 +120,15 @@ main {
     color: white;
 }
 
-/* Styles from RecipeSection.css */
+/* Markdown Recipe Section */
 .recipe-section-container {
     margin: 40px 20px;
     padding: 20px;
-    background-color: #ffffff; /* White background for content */
-    border-radius: 20px; /* Consistent border-radius */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     line-height: 1.6;
-    font-family: 'Poppins', sans-serif; /* Consistent font */
+    font-family: "Poppins", sans-serif;
 }
 
 .recipe-section-container h1,
@@ -130,16 +137,24 @@ main {
 .recipe-section-container h4,
 .recipe-section-container h5,
 .recipe-section-container h6 {
-    font-family: cursive; /* Consistent with header h1 */
+    font-family: cursive;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
-    color: #040403; /* Dark text color */
+    color: #040403;
 }
 
-.recipe-section-container h1 { font-size: 2em; }
-.recipe-section-container h2 { font-size: 1.75em; }
-.recipe-section-container h3 { font-size: 1.5em; }
-.recipe-section-container h4 { font-size: 1.25em; }
+.recipe-section-container h1 {
+    font-size: 2em;
+}
+.recipe-section-container h2 {
+    font-size: 1.75em;
+}
+.recipe-section-container h3 {
+    font-size: 1.5em;
+}
+.recipe-section-container h4 {
+    font-size: 1.25em;
+}
 
 .recipe-section-container p {
     margin-bottom: 1em;
@@ -159,7 +174,7 @@ main {
     background-color: #f0f0f0;
     padding: 2px 4px;
     border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 0.9em;
 }
 

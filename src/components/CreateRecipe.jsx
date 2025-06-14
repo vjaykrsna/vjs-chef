@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-export default function CreateRecipe({ ingredients, setRecipe }) {
+export default function CreateRecipe({ ingredients, setRecipe, setIsLoadingRecipe, setRecipeError }) {
     async function getRecipe() {
         const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
         const genAI = new GoogleGenerativeAI(apiKey);
@@ -12,8 +12,17 @@ export default function CreateRecipe({ ingredients, setRecipe }) {
             model: "gemini-2.5-flash-preview-05-20",
         });
 
-        const result = await model.generateContent(PROMPT);
-        setRecipe([true, result.response.text()]);
+        try {
+            setIsLoadingRecipe(true);
+            setRecipeError(null);
+            const result = await model.generateContent(PROMPT);
+            setRecipe([true, result.response.text()]);
+        } catch (error) {
+            console.error("Error generating recipe:", error);
+            setRecipeError("Failed to generate recipe. Please try again.");
+        } finally {
+            setIsLoadingRecipe(false);
+        }
     }
 
     return (

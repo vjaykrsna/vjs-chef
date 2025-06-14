@@ -18,22 +18,24 @@ export default function AddIngredForm({ handleSubmit, ingredients }) {
             return;
         }
 
-        handleSubmit(input.trim()); // Pass the input value directly
-        setInput(""); // Clear input after successful submission
+        handleSubmit(input.trim());
+        setInput("");
     }
 
     return (
-        <form className="add-ingred-form" onSubmit={handleFormSubmit}>
-            <input
-                type="text"
-                placeholder="eg. tomatoes"
-                name="ingred"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                style={{ borderColor: error ? 'red' : '' }}
-            />
-            <button>+ Add Ingredients</button>
-            {error && <p style={{ color: 'red', fontSize: '0.8em', marginTop: '5px' }}>{error}</p>}
-        </form>
+        <>
+            <form className="add-ingred-form" onSubmit={handleFormSubmit}>
+                <input
+                    type="text"
+                    placeholder="eg. tomatoes"
+                    name="ingred"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    style={{ borderColor: error ? 'red' : '' }}
+                />
+                <button>+ Add Ingredients</button>
+            </form>
+            {error && <p className="add-ingred-error">{error}</p>}
+        </>
     );
 }
