@@ -5,23 +5,19 @@ import CreateRecipe from "./CreateRecipe";
 import RecipeSection from "./RecipeSection";
 
 export default function App() {
-    const [ingredients, setIngredients] = useState([
-        "garlic",
-        "banana",
-        "brinjal",
-    ]);
+    const [ingredients, setIngredients] = useState([]);
 
     const [recipe, setRecipe] = useState([false, ""]);
     const [isLoadingRecipe, setIsLoadingRecipe] = useState(false);
     const [recipeError, setRecipeError] = useState(null);
 
-    function handleSubmit(newIngredient) {
+    function addIngred(newIngredient) {
         setIngredients((prev) => [...prev, newIngredient]);
     }
 
     return (
         <main>
-            <AddIngredForm handleSubmit={handleSubmit} ingredients={ingredients} />
+            <AddIngredForm handleSubmit={addIngred} ingredients={ingredients} />
 
             {ingredients.length ? (
                 <IngredientList ingredients={ingredients} />
@@ -36,9 +32,15 @@ export default function App() {
                 />
             )}
 
-            {isLoadingRecipe && <p>Generating recipe...</p>}
-            {recipeError && <p style={{ color: 'red' }}>Error: {recipeError}</p>}
-            {recipe[0] && <RecipeSection recipe={recipe[1]}/>}
+            {isLoadingRecipe && (
+                <div className="loading-container">
+                    <div className="loading"></div>
+                    <p className="loading-message">Generating recipe...</p>
+                </div>
+            )}
+
+            {recipeError && <p className="error-message">Error: {recipeError}</p>}
+            {recipe[0] && <RecipeSection recipe={recipe[1]} />}
         </main>
     );
 }

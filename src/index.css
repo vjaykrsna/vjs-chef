@@ -120,6 +120,43 @@ main {
     color: white;
 }
 
+.loading {
+    display: inline-block;
+    height: 25px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 4px solid #000000;
+    border-right: 4px solid #0000005f;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.loading-message{
+    font-size: 1.5rem;
+}
+.error-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.error-message {
+    color: red;
+}
+
 /* Markdown Recipe Section */
 .recipe-section-container {
     margin: 40px 20px;
