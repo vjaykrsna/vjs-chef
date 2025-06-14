@@ -7,7 +7,9 @@ export default function CreateRecipe({ ingredients, setRecipe, setIsLoadingRecip
             setIsLoadingRecipe(true);
             setRecipeError(null);
 
-            const response = await fetch('http://localhost:3001/api/generate-recipe', {
+            const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'; // Fallback for local development
+
+            const response = await fetch(`${BACKEND_URL}/api/generate-recipe`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

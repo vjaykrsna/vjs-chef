@@ -10,6 +10,11 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
+// Basic root route for health checks or simple pings
+app.get('/', (req, res) => {
+    res.status(200).send('Backend is running!');
+});
+
 // Endpoint to generate recipe
 app.post('/api/generate-recipe', async (req, res) => {
     try {
