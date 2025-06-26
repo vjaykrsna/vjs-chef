@@ -13,8 +13,9 @@ export default function App() {
 
     const scrollRef = useRef(null);
     useEffect(() => {
-        if (recipe[1] !== "") {
-            const offset = -140; // negative = leave 50px space from top
+        const recipeContent = recipe[1];
+        if (recipeContent !== "") {
+            const offset = -140;
             const elementPosition = scrollRef.current.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset + offset;
 
@@ -23,8 +24,7 @@ export default function App() {
                 behavior: "smooth",
             });
         }
-
-    }, [recipe[1]]);
+    }, [recipe, scrollRef]);
 
     function addIngred(newIngredient) {
         setIngredients((prev) => [...prev, newIngredient]);
