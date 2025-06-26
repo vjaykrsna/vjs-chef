@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,6 +11,9 @@ body {
 }
 
 header {
+    position: fixed;
+    width: 100%;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,13 +34,14 @@ header > h1 {
 
 main {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 90px auto 0 auto;
+    border: 0.1px solid transparent;
 }
 
 .add-ingred-form {
     display: flex;
     justify-content: center;
-    margin: 40px 0;
+    margin: 80px 0 40px 0;
     height: 40px;
     gap: 10px;
 }
@@ -44,7 +49,7 @@ main {
 .add-ingred-form > input {
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 7px;
-    width: 50%;
+    width: 55%;
     padding-left: 10px;
     font-size: 1.1rem;
 }
@@ -156,6 +161,13 @@ main {
 
 .error-message {
     color: red;
+}
+
+.info-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #555;
 }
 
 /* Markdown Recipe Section */

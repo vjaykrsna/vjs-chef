@@ -1,4 +1,4 @@
-export default function CreateRecipe({ ingredients, setRecipe, setIsLoadingRecipe, setRecipeError }) {
+export default function CreateRecipe({ ingredients, setRecipe, setIsLoadingRecipe, setRecipeError, ref }) {
     async function getRecipe() {
         const allIngreds = ingredients.join(", ");
         const PROMPT = `You are an assistant that receives a list of ingredients that a user has and suggests a recipe they could make with some or all of those ingredients. You don't need to use every ingredient they mention in your recipe. The recipe can include additional ingredients they didn't mention, but try not to include too many extra ingredients. Give structured output with basic information included. Format your response in markdown to make it easier to render to a web page. \n\n Ingredients: ${allIngreds}`;
@@ -36,7 +36,7 @@ export default function CreateRecipe({ ingredients, setRecipe, setIsLoadingRecip
     return (
         <div id="create-recipe-container">
             <div>
-                <p id="create-recipe-large-text">Ready for a recipe?</p>
+                <p ref={ref} id="create-recipe-large-text">Ready for a recipe?</p>
                 <p>Generate a recipe from your list of ingredients.</p>
             </div>
             <button onClick={getRecipe} className="create-recipe-button">
