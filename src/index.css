@@ -8,6 +8,7 @@ body {
     background-color: #fefdec;
     min-width: 350px;
     font-family: "Poppins", sans-serif;
+    font-size: 1rem;
 }
 
 header {
@@ -17,72 +18,74 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    gap: 10px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    padding: 0.625rem;
+    gap: 0.625rem;
+    box-shadow: 0 0.1875rem 0.1875rem rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
 }
 
-header > img {
-    height: 70px;
+header>img {
+    height: 4.375rem;
 }
 
-header > h1 {
+header>h1 {
     font-family: cursive;
-    font-size: 3rem;
+    font-size: 1.875rem;
 }
 
 main {
-    max-width: 600px;
-    margin: 90px auto 0 auto;
-    border: 0.1px solid transparent;
+    max-width: 37.5rem;
+    margin: 5.625rem auto 0 auto;
+    border: 0.00625rem solid transparent;
 }
 
 .add-ingred-form {
     display: flex;
     justify-content: center;
-    margin: 80px 0 40px 0;
-    height: 40px;
-    gap: 10px;
+    margin: 5rem 0 2.5rem 0;
+    /* height: 2.5rem; */
+    gap: 0.625rem;
 }
 
-.add-ingred-form > input {
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 7px;
+.add-ingred-form>input {
+    border: 0.125rem solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.4375rem;
+    height: 2.5rem;
     width: 55%;
-    padding-left: 10px;
+    padding-left: 0.625rem;
     font-size: 1.1rem;
 }
 
-.add-ingred-form > input:focus {
+.add-ingred-form>input:focus {
     outline: none;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 0.125rem solid rgba(0, 0, 0, 0.5);
 }
 
-.add-ingred-form > button {
+.add-ingred-form>button {
     background-color: #040403;
     color: white;
-    font-size: medium;
+    height: 2.5rem;
+    font-size: 1rem;
     border: 0;
-    border-radius: 7px;
-    padding: 0 10px;
+    border-radius: 0.4375rem;
+    padding: 0 0.625rem;
 }
 
 .add-ingred-error {
     color: red;
     font-size: 0.8em;
-    margin-top: 5px;
+    margin-top: 0.3125rem;
     text-align: center;
     width: 100%;
 }
 
 #ingred-list-container {
-    padding-left: 80px;
+    padding-left: 5rem;
 }
 
 #ingred-list-heading {
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
 #ingred-list {
@@ -90,7 +93,7 @@ main {
 }
 
 #ingred-list li {
-    margin-bottom: 7px;
+    margin-bottom: 0.4375rem;
 }
 
 #ingred-list li::before {
@@ -98,41 +101,38 @@ main {
 }
 
 #create-recipe-container {
-    margin: 40px 10px;
-    padding: 0px 10px;
+    margin: 2.5rem 0.625rem;
+    padding: 0rem 0.625rem;
     display: flex;
-    height: 100px;
+    min-height: 6.25rem;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
     background-color: #0000001f;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 #create-recipe-large-text {
-    font-size: large;
+    font-size: 1.125rem;
     font-weight: 500;
-}
-
-#create-recipe-large-text + p {
-    color: #000000af;
+    color: #000000af
 }
 
 .create-recipe-button {
     border: 0;
-    border-radius: 10px;
-    padding: 10px 15px;
+    border-radius: 0.625rem;
+    padding: 0.625rem 0.9375rem;
     background-color: #cf784f;
     color: white;
 }
 
 .loading {
     display: inline-block;
-    height: 25px;
+    height: 1.5625rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    border: 4px solid #000000;
-    border-right: 4px solid #0000005f;
+    border: 0.25rem solid #000000;
+    border-right: 0.25rem solid #0000005f;
     animation: spin 1s linear infinite;
 }
 
@@ -146,16 +146,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 0.625rem;
+    margin-top: 1.25rem;
 }
 
-.loading-message{
+.loading-message {
     font-size: 1.5rem;
 }
+
 .error-message {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     font-size: 1.1em;
 }
 
@@ -165,90 +166,27 @@ main {
 
 .info-message {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     font-size: 1.1em;
     color: #555;
 }
 
-/* Markdown Recipe Section */
-.recipe-section-container {
-    margin: 40px 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    line-height: 1.6;
-    font-family: "Poppins", sans-serif;
-}
+@media (max-width: 450px) {
+    .add-ingred-form {
+        flex-wrap: wrap;
+    }
 
-.recipe-section-container h1,
-.recipe-section-container h2,
-.recipe-section-container h3,
-.recipe-section-container h4,
-.recipe-section-container h5,
-.recipe-section-container h6 {
-    font-family: cursive;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    color: #040403;
-}
+    .add-ingred-form input {
+        width: 90%;
+    }
 
-.recipe-section-container h1 {
-    font-size: 2em;
-}
-.recipe-section-container h2 {
-    font-size: 1.75em;
-}
-.recipe-section-container h3 {
-    font-size: 1.5em;
-}
-.recipe-section-container h4 {
-    font-size: 1.25em;
-}
+    .add-ingred-form button {
+        margin-left: 0 auto;
+    }
 
-.recipe-section-container p {
-    margin-bottom: 1em;
-}
-
-.recipe-section-container ul,
-.recipe-section-container ol {
-    margin-left: 20px;
-    margin-bottom: 1em;
-}
-
-.recipe-section-container li {
-    margin-bottom: 0.5em;
-}
-
-.recipe-section-container code {
-    background-color: #f0f0f0;
-    padding: 2px 4px;
-    border-radius: 4px;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 0.9em;
-}
-
-.recipe-section-container pre {
-    background-color: #040403;
-    color: white;
-    padding: 15px;
-    border-radius: 7px;
-    overflow-x: auto;
-    margin-bottom: 1em;
-}
-
-.recipe-section-container pre code {
-    background-color: transparent;
-    color: white;
-    padding: 0;
-    border-radius: 0;
-}
-
-.recipe-section-container a {
-    color: #cf784f;
-    text-decoration: none;
-}
-
-.recipe-section-container a:hover {
-    text-decoration: underline;
+    #create-recipe-container {
+        margin: 2.5rem 0.625rem;
+        padding: 0.5rem 1rem;
+        gap: 0rem;
+    }
 }

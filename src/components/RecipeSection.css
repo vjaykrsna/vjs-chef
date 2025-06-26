@@ -1,0 +1,85 @@
+/* Markdown Recipe Section */
+.recipe-section-container {
+    margin: 2.5rem 1.25rem;
+    padding: 1.25rem;
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+}
+
+.recipe-section-container h1,
+.recipe-section-container h2,
+.recipe-section-container h3,
+.recipe-section-container h4,
+.recipe-section-container h5,
+.recipe-section-container h6 {
+    font-family: cursive;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #040403;
+}
+
+.recipe-section-container h1 {
+    font-size: 2em;
+}
+
+.recipe-section-container h2 {
+    font-size: 1.75em;
+}
+
+.recipe-section-container h3 {
+    font-size: 1.5em;
+}
+
+.recipe-section-container h4 {
+    font-size: 1.25em;
+}
+
+.recipe-section-container p {
+    margin-bottom: 1em;
+}
+
+.recipe-section-container ul,
+.recipe-section-container ol {
+    margin-left: 1.25rem;
+    margin-bottom: 1em;
+}
+
+.recipe-section-container li {
+    margin-bottom: 0.5em;
+}
+
+.recipe-section-container code {
+    background-color: #f0f0f0;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9em;
+}
+
+.recipe-section-container pre {
+    background-color: #040403;
+    color: white;
+    padding: 0.9375rem;
+    border-radius: 0.4375rem;
+    overflow-x: auto;
+    margin-bottom: 1em;
+}
+
+.recipe-section-container pre code {
+    background-color: transparent;
+    color: white;
+    padding: 0;
+    border-radius: 0;
+}
+
+.recipe-section-container a {
+    color: #cf784f;
+    text-decoration: none;
+}
+
+.recipe-section-container a:hover {
+    text-decoration: underline;
+}
