@@ -5,7 +5,7 @@ import CreateRecipe from "./CreateRecipe"
 import RecipeSection from "./RecipeSection"
 
 export default function App() {
-    const [ingredients, setIngredients] = useState(["tomato", "potato", "baigan"]);
+    const [ingredients, setIngredients] = useState([]);
 
     const [recipe, setRecipe] = useState([false, ""]);
     const [isLoadingRecipe, setIsLoadingRecipe] = useState(false);
